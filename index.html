@@ -1,19 +1,14 @@
 <!doctype html>
-<html lang="en">
-  <head>
-
+<html lang="en">  
+  <head>  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
     <link rel="stylesheet" href="styles.css">
     <script src="index.js"></script>
     <title>Loading</title>
   </head>
-  <body>
-
-
+  <body id="colouring">
     <div class="text-center">
         CSA <br> WEBSITE
     </div>
@@ -37,10 +32,32 @@
         <span></span>
       </div>
       <div class="text1">LAUNCHING SOON</div>
+
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script type="text/javascript">
+         $('body').click(function(){
+          $('body').css('background','#' + bgColor());
+         }) ;
+         function bgColor()
+          {
+            return Math.floor(Math.random()*16777216).toString(16); 
+          } 
+           
       
+      </script>
       
+<!-- <script>
+var colors = ['blue','red', 'coral', 'cyan', 'sky-blue'],
+i = 0; 
+var elementToChange = document.getElementById('colouring');  
+document.body.addEventListener('click', function(event){
+    elementToChange.style.backgroundColor = colors[++i];
+    if (i >= colors.length){
+        i = 0;
+    }
+});
+</script> -->
   </body>
-
-
-
-
+</html>
